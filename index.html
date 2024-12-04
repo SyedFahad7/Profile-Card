@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,10 +5,7 @@
     <meta content="Fahad's Profile Card" name="description" />
     <title>Fahad's Profile Card</title>
     <meta property="og:title" content="Fahad's Profile Card" />
-    <meta
-      property="og:description"
-      content="Engineer by Day, Coder by Night"
-    />
+    <meta property="og:description" content="Engineer by Day, Coder by Night" />
     <meta
       property="og:image"
       content="https://raw.githubusercontent.com/SyedFahad7/Profile-Card/refs/heads/main/assets/preview.png"
@@ -32,7 +28,20 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      .plus-jakarta-sans-regular {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
       .press-start-2p-regular {
         font-family: "Press Start 2P", serif;
         font-weight: 400;
@@ -42,6 +51,41 @@
       @media (min-width: 768px) {
         .social-icon:hover {
           transform: scale(1.01);
+        }
+      }
+
+      .bounce {
+        animation: bounce 0.5s;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     </style>
@@ -59,36 +103,43 @@
         Your browser does not support the video tag.
       </video>
       <div class="container mx-auto relative z-10">
-        <div class="flex items-center justify-center min-h-screen py-4 pt-24">
+        <div class="flex items-center justify-center min-h-screen py-4 pt-24 pb-12">
           <div
-            class="bg-white relative shadow rounded-lg w-5/6 md:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto pt-8 pb-10"
+            class="bg-white bg-opacity-70 backdrop-blur-sm backdrop-opacity-30 relative shadow rounded-lg w-5/6 md:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto pt-8 pb-10 opacity-0"
+            id="profile-card"
           >
             <div class="flex justify-center">
               <img
                 alt="Profile picture of Syed Fahad"
-                class="rounded-full mx-auto absolute -top-16 w-32 h-32 shadow-md border-4 border-white transition duration-200 transform hover:scale-110"
+                class="rounded-full mx-auto absolute -top-16 w-32 h-32 shadow-md border-4 border-white transition duration-200 transform hover:scale-110 bounce"
                 height="128"
                 src="assets/fahad.jpg"
                 width="128"
+                id="profile-image"
               />
             </div>
             <div class="mt-16">
-              <h1 class="font-bold text-center sm:text-sm lg:text-3xl text-gray-900 press-start-2p-regular">
+              <h1
+                class="font-bold text-center sm:text-sm lg:text-3xl text-gray-900 press-start-2p-regular"
+              >
                 Syed Fahad
               </h1>
-              <p class="text-center sm:text-xl lg:text-2xl text-gray-400 font-medium">
+              <p
+                class="text-center sm:text-xl lg:text-2xl text-gray-400 font-medium plus-jakarta-sans-regular tracking-normal"
+              >
                 Engineer by Day, Coder by Night
                 <img
                   src="https://em-content.zobj.net/source/apple/391/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png"
                   alt="iOS emoji of a man with a laptop"
-                  class="inline w-5 h-5 mb-2"
+                  class="inline w-5 h-5 sm:mb-4 lg:mb-1 mb-1"
                 />
               </p>
               <div class="my-5 px-6">
                 <a
-                  class="block text-white rounded-lg text-center sm:text-xl lg:text-xl font-medium leading-6 px-6 py-3 hover:bg-gray-900 bg-black hover:text-white"
+                  class="block text-white rounded-lg text-center plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium leading-6 px-6 py-3 hover:bg-gray-900 bg-black hover:text-white"
                   href="https://linktr.ee/sfahad"
-                  >Connect with <span class="font-bold sm:text-xl lg:text-xl ">me</span></a
+                  >Connect with
+                  <span class="plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium tracking-wide">me</span></a
                 >
               </div>
               <div class="flex justify-center items-center my-5 px-6 space-x-4">
@@ -119,19 +170,21 @@
                 ></a>
               </div>
               <div class="w-full">
-                <h3 class=" press-start-2p-regular font-medium text-gray-900 text-left px-6 sm:text-xl lg:text-xl">
+                <h3
+                  class="press-start-2p-regular font-medium text-gray-900 text-left px-6 sm:text-xl lg:text-xl"
+                >
                   Recent Projects
                 </h3>
                 <div
                   class="mt-5 w-full flex flex-col items-center overflow-hidden text-sm"
                 >
                   <a
-                    class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-100 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
+                    class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-600 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
                     href="https://github.com/syedfahad7/ChibiWallet"
                   >
                     <img
-                      alt="Logo of Project 5"
-                      class="rounded-full h-6 shadow-md inline-block mr-2 "
+                      alt="Logo of Project ChibiWallet"
+                      class="rounded-full h-6 shadow-md inline-block mr-2"
                       height="24"
                       src="assets/chibi.png"
                       width="24"
@@ -139,44 +192,44 @@
                     ChibiWallet
                   </a>
                   <a
-                  class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-100 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
-                  href="https://github.com/syedfahad7/Codelet"
-                >
-                  <img
-                    alt="Logo of Project 5"
-                    class="rounded-full h-6 shadow-md inline-block mr-2 "
-                    height="28"
-                    src="assets/codelet.png"
-                    width="28"
-                  />
-                  Codelet
-                </a>
-                <a
-                class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-100 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
-                href="https://github.com/syedfahad7/Kokoro"
-              >
-                <img
-                  alt="Logo of Project 5"
-                  class="rounded-full h-6 shadow-md inline-block mr-2 "
-                  height="28"
-                  src="assets/kokoro.png"
-                  width="28"
-                />
-                Kokoro
-              </a>
+                    class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-600 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
+                    href="https://github.com/syedfahad7/Codelet"
+                  >
+                    <img
+                      alt="Logo of Project Codelet"
+                      class="rounded-full h-6 shadow-md inline-block mr-2"
+                      height="28"
+                      src="assets/codelet.png"
+                      width="28"
+                    />
+                    Codelet
+                  </a>
                   <a
-                  class="w-full sm:text-sm lg:text-md tracking-wide border-t border-gray-100 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
-                  href="https://github.com/syedfahad7/QuizWings"
-                >
-                  <img
-                    alt="Logo of Project 5"
-                    class="rounded-full h-6 shadow-md inline-block mr-2 "
-                    height="24"
-                    src="assets/quizwingslogo.png"
-                    width="24"
-                  />
-                  QuizWings
-                </a>
+                    class="w-full sm:text-sm lg:text-md border-t tracking-wide border-gray-600 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
+                    href="https://github.com/syedfahad7/Kokoro"
+                  >
+                    <img
+                      alt="Logo of Project Kokoro"
+                      class="rounded-full h-6 shadow-md inline-block mr-2"
+                      height="28"
+                      src="assets/kokoro.png"
+                      width="28"
+                    />
+                    Kokoro
+                  </a>
+                  <a
+                    class="w-full sm:text-sm lg:text-md tracking-wide border-t border-gray-600 text-gray-600 py-4 press-start-2p-regular pl-6 pr-3 w-full block hover:bg-gray-100 transition duration-150 overflow-hidden"
+                    href="https://github.com/syedfahad7/QuizWings"
+                  >
+                    <img
+                      alt="Logo of Project QuizWings"
+                      class="rounded-full h-6 shadow-md inline-block mr-2"
+                      height="24"
+                      src="assets/quizwingslogo.png"
+                      width="24"
+                    />
+                    QuizWings
+                  </a>
                 </div>
               </div>
               <div class="flex justify-center mt-6">
@@ -197,5 +250,16 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profileImage = document.getElementById("profile-image");
+        const profileCard = document.getElementById("profile-card");
+
+        profileImage.addEventListener("animationend", function () {
+          profileCard.classList.add("fade-in");
+          profileCard.style.opacity = 1;
+        });
+      });
+    </script>
   </body>
 </html>
