@@ -4,34 +4,34 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Fahad's Profile Card" name="description" />
     <title>Fahad's Profile Card</title>
-    <meta property="og:title" content="Fahad's Profile Card" />
-    <meta property="og:description" content="Engineer by Day, Coder by Night" />
+    <meta content="Fahad's Profile Card" property="og:title" />
+    <meta content="Engineer by Day, Coder by Night" property="og:description" />
     <meta
-      property="og:image"
       content="https://raw.githubusercontent.com/SyedFahad7/Profile-Card/refs/heads/main/assets/preview.png"
+      property="og:image"
     />
-    <meta property="og:url" content="https://fahads.xyz/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+    <meta content="https://fahads.xyz/" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="en_US" property="og:locale" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Press+Start+2P&amp;display=swap"
       rel="stylesheet"
     />
     <style>
@@ -46,6 +46,9 @@
         font-family: "Press Start 2P", serif;
         font-weight: 400;
         font-style: normal;
+      }
+      .reduced-spacing {
+        letter-spacing: -0.5em; /* Adjust as needed */
       }
 
       @media (min-width: 768px) {
@@ -93,17 +96,19 @@
   <body class="bg-gray-300 antialiased">
     <div class="relative min-h-screen flex items-center justify-center">
       <video
+        autoplay=""
         class="absolute inset-0 w-full h-full object-cover"
-        autoplay
-        loop
-        muted
-        playsinline
+        loop=""
+        muted=""
+        playsinline=""
       >
         <source src="assets/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="container mx-auto relative z-10">
-        <div class="flex items-center justify-center min-h-screen py-4 pt-24 pb-12">
+        <div
+          class="flex items-center justify-center min-h-screen py-4 pt-24 pb-20"
+        >
           <div
             class="bg-white bg-opacity-70 backdrop-blur-sm backdrop-opacity-30 relative shadow rounded-lg w-5/6 md:w-5/6 lg:w-4/6 xl:w-3/6 mx-auto pt-8 pb-10 opacity-0"
             id="profile-card"
@@ -113,9 +118,18 @@
                 alt="Profile picture of Syed Fahad"
                 class="rounded-full mx-auto absolute -top-16 w-32 h-32 shadow-md border-4 border-white transition duration-200 transform hover:scale-110 bounce"
                 height="128"
+                id="profile-image"
                 src="assets/fahad.jpg"
                 width="128"
-                id="profile-image"
+              />
+            </div>
+            <div class="absolute -top-12 -right-1">
+              <img
+                alt="Pixel art character sitting on top of the profile card"
+                class="w-12 h-12"
+                height="50"
+                src="./assets/pop.gif"
+                width="50"
               />
             </div>
             <div class="mt-16">
@@ -129,45 +143,87 @@
               >
                 Engineer by Day, Coder by Night
                 <img
-                  src="https://em-content.zobj.net/source/apple/391/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png"
                   alt="iOS emoji of a man with a laptop"
                   class="inline w-5 h-5 sm:mb-4 lg:mb-1 mb-1"
+                  src="https://em-content.zobj.net/source/apple/391/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png"
                 />
               </p>
-              <div class="my-5 px-6">
+              <div class="my-6 px-6">
                 <a
-                  class="block text-white rounded-lg text-center plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium leading-6 px-6 py-3 hover:bg-gray-900 bg-black hover:text-white"
+                  class="block text-white rounded-lg text-center plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium leading-6 px-6 py-3 hover:bg-gray-900 bg-black bg-opacity-80 backdrop-filter hover:text-white"
                   href="https://linktr.ee/sfahad"
-                  >Connect with
-                  <span class="plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium tracking-wide">me</span></a
                 >
+                  Connect with
+                  <span
+                    class="plus-jakarta-sans-regular sm:text-xl lg:text-xl font-medium tracking-wide"
+                  >
+                    me
+                  </span>
+                </a>
               </div>
               <div class="flex justify-center items-center my-5 px-6 space-x-4">
                 <a
                   class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
                   href="https://x.com/fahad_developer"
-                  ><i class="fab fa-twitter text-xl"></i
-                ></a>
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/twitter.png"
+                    alt="Twitter Icon"
+                    class="w-6 h-6 inline"
+                  />
+                </a>
                 <a
                   class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
-                  href="https://github.com/syedfahad7"
-                  ><i class="fab fa-github text-xl"></i
-                ></a>
+                  href="https://linkedin.com/in/syedfahad7"
+                >
+                  <img
+                    src="assets/linkedin-gray.png"
+                    alt="LinkedIn Icon"
+                    class="w-6 h-6 inline"
+                  />
+                </a>
                 <a
                   class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
                   href="https://instagram.com/fahad.developer"
-                  ><i class="fab fa-instagram text-xl"></i
-                ></a>
+                >
+                  <img
+                    src="assets/instagram-gray.png"
+                    alt="Instagram Icon"
+                    class="w-6 h-6 inline"
+                  />
+                </a>
+                <a
+                  class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
+                  href="https://github.com/syedfahad7"
+                >
+                  <img
+                    src="assets/github-2-sat.png"
+                    alt="GitHub Icon"
+                    class="w-6 h-6 inline"
+                  />
+                </a>
                 <a
                   class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
                   href="mailto:sfahad2904@gmail.com"
-                  ><i class="fas fa-envelope text-xl"></i
-                ></a>
+                >
+                  <img
+                    src="assets/mailbox-gray.png"
+                    alt="Email Icon"
+                    class="w-7 h-7 inline mb-1"
+                  />
+                </a>
                 <a
                   class="text-gray-500 hover:text-gray-900 rounded transition duration-150 ease-in font-medium text-sm text-center py-3 social-icon"
                   href="https://syedfahad.tech"
-                  ><i class="fas fa-globe text-xl"></i
-                ></a>
+                >
+                  <img
+                    src="assets/globe3.1.png"
+                    alt="website Icon"
+                    class="w-6 h-6 inline"
+                  />
+                </a>
               </div>
               <div class="w-full">
                 <h3
@@ -235,17 +291,38 @@
               <div class="flex justify-center mt-6">
                 <a
                   href="https://buymeacoffee.com/fahad.developer"
-                  target="_blank"
                   rel="noopener"
+                  target="_blank"
                 >
                   <img
-                    src="assets/bmc.svg"
                     alt="Buy me a coffee button"
-                    class="w-32 h-auto"
+                    class="w-36 h-auto"
+                    src="assets/bmc.svg"
                   />
                 </a>
               </div>
             </div>
+            <!-- <div class="text-center mt-4">
+              <p
+                class="text-gray-600 press-start-2p-regular tracking-normal reduced-spacing"
+              >
+                Made with
+                <img
+                  alt="Heart symbol"
+                  class="inline w-5 h-5 mb-1"
+                  src="./assets/hearticon.svg"
+                />
+              </p>
+            </div> -->
+            <div class="absolute left-1/2 transform -translate-x-1/2" style="bottom: -4rem;">
+              <img
+              alt="Pixel art character sitting on top of the profile card"
+              class="w-20 h-16"
+              height="50"
+              src="./assets/pop3.1.gif"
+              width="50"
+              />
+            </div>            
           </div>
         </div>
       </div>
